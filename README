@@ -1,0 +1,8 @@
+Get the C# Dev Kit form  the extension market
+Sign into it (Bottom left corner)
+CTRL+SHIFT+P 
+".Net Create Project" 
+"Console App"
+Name the project
+Name the location
+"Create Project"
