@@ -184,8 +184,6 @@
         }
         public class Stack64U {
             private List<UInt64> Stack;
-            private int count;
-            private int CurPos;
             public Stack64U(UInt64 n)//Init a Stack with Plate with a value
             {
                 Stack = new List<UInt64>();
