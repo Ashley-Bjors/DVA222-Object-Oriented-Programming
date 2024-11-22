@@ -155,7 +155,7 @@
                 System.Console.WriteLine($"Empty: {Task1Stack.Empty()}");
                 //Task1Stack.Pop(); //Throws exception
                 System.Console.WriteLine("\nTask3:");
-                Task3.Stack64U Task3Stack = new Task3.Stack64U(8);    
+                Task3.Stack64U Task3Stack = new Task3.Stack64U();    
                 Task3Stack.Push(8);    System.Console.WriteLine($"INPUT: {8}");
                 Task3Stack.Push(3);    System.Console.WriteLine($"INPUT: {3}");
                 Task3Stack.Push(15);    System.Console.WriteLine($"INPUT: {15}");
