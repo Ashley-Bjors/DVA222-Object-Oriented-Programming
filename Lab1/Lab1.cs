@@ -4,18 +4,22 @@
     namespace Task1
     {
         public class Plate64U{
-            public UInt64 Value;
-            public UInt64 Min;
+            public readonly UInt64 Value;
+            public readonly UInt64 Min;
 
-            public Plate64U(UInt64 n)//Init a plate with a value
+            public Plate64U(UInt64 n,UInt64 m)//Init a plate with a value
             {
                 Value = n;
+                Min = m;
+
             }
 
+            /*
             public Plate64U()//Init a plate without a value
             {
 
             }
+            */
         }
         public class Stack64U {
             private Plate64U[] Stack;
@@ -25,19 +29,20 @@
             {
                 Len = 1;
                 Stack = new Plate64U[Len];
-                Stack[0] = new Plate64U(n);
-                Stack[0].Min = n;
+                Stack[0] = new Plate64U(n,n);
+                //Stack[0].Min = n;
                 CurPos = 1;
                 //System.Console.WriteLine($"DEBUG: Pushed {n} into index {0}");
 
             }
+            /*
             public Stack64U()//Init a Stack with Plate without a value
             {
                 Len = 1;
                 Stack = new Plate64U[Len];
                 CurPos = 0;
 
-            }
+            }*/
             public void Push(UInt64 n)//Add a plate to the top of the stack. Resize if necessary. Includes setting the minimum item inside the current stack(including the current plate) 
             {
                 if(CurPos == Len)
@@ -45,23 +50,26 @@
                     Len = Len*2;
                     Array.Resize(ref Stack, Len);
                 }
-                Stack[CurPos] = new Plate64U(n);
+                //Stack[CurPos] = new Plate64U(n);
                 //System.Console.WriteLine($"DEBUG: Pushed {n} into index {CurPos}");
 
                 if(CurPos > 0)
                 {
                     if(Stack[CurPos-1].Min > n)
                     {
-                        Stack[CurPos].Min = n;
+                        //Stack[CurPos].Min = n;
+                        Stack[CurPos] = new Plate64U(n,n);
                     }
                     else
                     {
-                        Stack[CurPos].Min = Stack[CurPos-1].Min;
+                        //Stack[CurPos].Min = Stack[CurPos-1].Min;
+                        Stack[CurPos] = new Plate64U(n,Stack[CurPos-1].Min);
                     }
                 }
                 else
                 {
-                    Stack[CurPos].Min = n;
+                    //Stack[CurPos].Min = n;
+                    Stack[CurPos] = new Plate64U(n,n);
                 }
                 CurPos++;
             }
@@ -170,7 +178,7 @@
     namespace Task3
     {
         public class Plate64U{
-            public UInt64 Value;
+            public readonly UInt64 Value;
 
             public Plate64U(UInt64 n)
             {
@@ -191,11 +199,13 @@
                 //System.Console.WriteLine($"DEBUG: Pushed {n} into index {Stack.Count-1}");
 
             }
+            /*
             public Stack64U()//Init a Stack with Plate without a value
             {
                 Stack = new List<UInt64>();
 
             }
+            */
             public void Push(UInt64 n)//Add a plate to the top of the stack.
             {
                 Stack.Add(n);
