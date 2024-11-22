@@ -25,6 +25,7 @@
             private Plate64U[] Stack;
             private int Len;
             private int CurPos;
+            /*
             public Stack64U(UInt64 n)//Init a Stack with Plate with a value
             {
                 Len = 1;
@@ -35,14 +36,14 @@
                 //System.Console.WriteLine($"DEBUG: Pushed {n} into index {0}");
 
             }
-            /*
+            */
             public Stack64U()//Init a Stack with Plate without a value
             {
                 Len = 1;
                 Stack = new Plate64U[Len];
                 CurPos = 0;
 
-            }*/
+            }
             public void Push(UInt64 n)//Add a plate to the top of the stack. Resize if necessary. Includes setting the minimum item inside the current stack(including the current plate) 
             {
                 if(CurPos == Len)
@@ -133,7 +134,8 @@
             static void Main()
             {
                 System.Console.WriteLine("Task1:");
-                Task1.Stack64U Task1Stack = new Task1.Stack64U(8);    System.Console.WriteLine($"INPUT: {8}");
+                Task1.Stack64U Task1Stack = new Task1.Stack64U();    
+                Task1Stack.Push(8);    System.Console.WriteLine($"INPUT: {8}");
                 Task1Stack.Push(3);    System.Console.WriteLine($"INPUT: {3}");
                 Task1Stack.Push(15);    System.Console.WriteLine($"INPUT: {15}");
                 Task1Stack.Push(4);    System.Console.WriteLine($"INPUT: {4}");
@@ -153,7 +155,8 @@
                 System.Console.WriteLine($"Empty: {Task1Stack.Empty()}");
                 //Task1Stack.Pop(); //Throws exception
                 System.Console.WriteLine("\nTask3:");
-                Task3.Stack64U Task3Stack = new Task3.Stack64U(8);    System.Console.WriteLine($"INPUT: {8}");
+                Task3.Stack64U Task3Stack = new Task3.Stack64U(8);    
+                Task3Stack.Push(8);    System.Console.WriteLine($"INPUT: {8}");
                 Task3Stack.Push(3);    System.Console.WriteLine($"INPUT: {3}");
                 Task3Stack.Push(15);    System.Console.WriteLine($"INPUT: {15}");
                 Task3Stack.Push(4);    System.Console.WriteLine($"INPUT: {4}");
@@ -179,7 +182,7 @@
     {
         public class Plate64U{
             public readonly UInt64 Value;
-
+            /*
             public Plate64U(UInt64 n)
             {
                 Value = n;
@@ -189,9 +192,11 @@
             {
 
             }
+            */
         }
         public class Stack64U {
             private List<UInt64> Stack;
+            /*
             public Stack64U(UInt64 n)//Init a Stack with Plate with a value
             {
                 Stack = new List<UInt64>();
@@ -199,13 +204,13 @@
                 //System.Console.WriteLine($"DEBUG: Pushed {n} into index {Stack.Count-1}");
 
             }
-            /*
+            */
             public Stack64U()//Init a Stack with Plate without a value
             {
                 Stack = new List<UInt64>();
 
             }
-            */
+            
             public void Push(UInt64 n)//Add a plate to the top of the stack.
             {
                 Stack.Add(n);
