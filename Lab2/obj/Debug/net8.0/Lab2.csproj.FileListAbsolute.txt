@@ -1,0 +1,15 @@
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\bin\Debug\net8.0\Lab2.exe
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\bin\Debug\net8.0\Lab2.deps.json
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\bin\Debug\net8.0\Lab2.runtimeconfig.json
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\bin\Debug\net8.0\Lab2.dll
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\bin\Debug\net8.0\Lab2.pdb
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfoInputs.cache
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfo.cs
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.sourcelink.json
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.dll
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\refint\Lab2.dll
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.pdb
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\Lab2.genruntimeconfig.cache
+C:\Users\Ashley Björs\OneDrive - Mälardalens högskola\MDU\DVA222 Object-Oriented Programming\Lab2\obj\Debug\net8.0\ref\Lab2.dll
