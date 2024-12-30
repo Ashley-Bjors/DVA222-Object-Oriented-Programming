@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Lab5
+{
+    using System;
+
+    namespace Task1
+    {
+
+    }
+
+}
