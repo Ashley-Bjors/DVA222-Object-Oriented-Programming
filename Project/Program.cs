@@ -5,6 +5,7 @@ using Cairo;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Atk;
+using Gdk;
 
 
 /*Tankar inför kommande, behöver ordnas så det blir ett client - program, just nu görs det mesta i main filen 
@@ -132,7 +133,7 @@ class Task1and2 : GridWindow
 }
 class Task3 : GridWindow
 {
-	public Task3() : base(3,3,100, "grey", "blue"){}
+	public Task3() : base(9,9,100, "grey", "blue"){}
 
 }
 
@@ -148,7 +149,7 @@ class Program
 		//window.SetDefaultSize(640, 480);
 	 // Make the window non-resizable
 		
-		List <GridWindow> grid= new List<GridWindow>{new Task1and2()}; //gets the grids for task 1,2,3 
+		List <GridWindow> grid= new List<GridWindow>{new Task3()}; //gets the grids for task 1,2,3 
 		Grid box = new Grid{ColumnSpacing = 1, RowSpacing = 1, Margin = 5}; //grid specifiks
 
 		//For loop to fill color to start with for circles
@@ -172,8 +173,10 @@ class Program
 		//window.Drawn += (sender, args) => OnDrawn();
 		// Show all widgets
 		
+		/*
 		//Runs an animation of task 1.2
 		GLib.Timeout.Add(1000,() =>{
+			Console.WriteLine($"DEBUG: Circle Added");
 			//grid[0].DrawFunction(box);
 			Random rand = new Random();
 			int r = rand.Next(grid[0].Rows);
@@ -202,6 +205,41 @@ class Program
 
 			}
 				
+			});
+
+			*/
+		
+		
+		
+		Gdk.Key lastInput = 0; //Initiate a variable to save the last player input. The use of 0 is arbitrary
+		window.KeyPressEvent += (sender, args) => lastInput = args.Event.Key; //Save Said input^^
+			//Runs the game of Task 1.3
+		GLib.Timeout.Add(100,() =>{
+			Console.WriteLine($"DEBUG: Game Engine Tick(1s)");
+			if(lastInput != 0) //See if the input has changed from the default
+			{
+				Console.WriteLine($"DEBUG: KeyPressEvent: {lastInput.ToString()}");
+				if("123456789".Contains(lastInput.ToString()[lastInput.ToString().Length - 1]))//See if the last input is a value between 1 & 9. This can be done so much better by using the method used in getting int column a few rows below 
+				{
+					Console.WriteLine($"DEBUG: KeyPressEvent within Bounds");
+					int column = lastInput.ToString()[lastInput.ToString().Length - 1]- '0' - 1; //Turn the latest input from a string into a int and make it line up with the actual value by - '0'
+					for (int i = grid[0].Rows - 1; i > 0; i--) //Iterate from the bottom to the top row
+					{
+						if(grid[0].CircleColor[i,column]=="grey")
+						{
+							grid[0].CircleColor[i,column] = "red";
+							//This only updates when minimised ;_; PLS Fix
+							break;
+						}
+					}
+					
+					//Add a if player input successful then do Random ENEMY move. Reuse code above?
+
+				}
+				 
+				lastInput = 0;
+			}
+			return true;				
 			});
 		window.ShowAll();
 		// Run the GTK application
